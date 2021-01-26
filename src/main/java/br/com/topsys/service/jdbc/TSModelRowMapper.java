@@ -26,7 +26,10 @@ public class TSModelRowMapper<T> implements RowMapper<T> {
 
 		if (parametros != null) {
 			for (int x = 0; x < parametros.length; x++) {
-				wrapper.setPropertyValue(parametros[x], rs.getObject(x + 1));
+				if(wrapper.isWritableProperty(parametros[x])){
+					wrapper.setPropertyValue(parametros[x], rs.getObject(x + 1));
+				}
+				
 			}
 		}
 
