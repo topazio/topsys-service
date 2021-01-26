@@ -44,7 +44,7 @@ public class TSServiceException {
 	public ResponseEntity<Object> handleException(DuplicateKeyException ex) {
 		
 		return new ResponseEntity<Object>(
-				new TSResponseExceptionModel(HttpStatus.BAD_REQUEST.value(), new Date(), "Já existe esse registro!"),
+				new TSResponseExceptionModel(HttpStatus.BAD_REQUEST.value(), new Date(), "JÃ¡ existe esse registro!"),
 				HttpStatus.BAD_REQUEST);
 
 	}
@@ -62,7 +62,7 @@ public class TSServiceException {
 	public ResponseEntity<Object> handleException(EmptyResultDataAccessException ex) {
 		
 		return new ResponseEntity<Object>(
-				new TSResponseExceptionModel(HttpStatus.OK.value(), new Date(), "Não retornou nenhum registro!"),
+				new TSResponseExceptionModel(HttpStatus.OK.value(), new Date(), "NÃ¢o retornou nenhum registro!"),
 				HttpStatus.OK); 
 
 	}
@@ -71,7 +71,7 @@ public class TSServiceException {
 	public ResponseEntity<Object> handleException(MethodArgumentNotValidException ex) {
 		
 		return new ResponseEntity<Object>(
-				new TSResponseExceptionModel(HttpStatus.BAD_REQUEST.value(), new Date(), "Campos obrigatórios!"),
+				new TSResponseExceptionModel(HttpStatus.BAD_REQUEST.value(), new Date(), "Campos obrigatÃ³rios!"),
 				HttpStatus.BAD_REQUEST);
 
 	}
